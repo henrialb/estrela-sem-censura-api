@@ -10,7 +10,7 @@
 Rails.application.config.middleware.insert_before 0, Rack::Cors do
   allow do
     if Rails.env.production?
-      origins 'https://your-production-domain.com' # Replace with your production frontend URL
+      origins 'https://estrela-sem-censura.netlify.app/'
     else
       origins '*'
     end
