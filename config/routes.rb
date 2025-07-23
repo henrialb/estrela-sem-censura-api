@@ -12,6 +12,7 @@ Rails.application.routes.draw do
   namespace :api do
     post '/auth/facebook', to: 'auth#facebook'
     get '/auth/me', to: 'users#me'
+    post '/callbacks/facebook/delete', to: 'callbacks#facebook_delete'
 
     resources :posts, only: %i[index create] do
       resources :comments, only: :create
