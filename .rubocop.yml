@@ -1,0 +1,50 @@
+---
+plugins:
+  - rubocop-rails
+  - rubocop-performance
+  - rubocop-factory_bot
+  - rubocop-rspec
+  - rubocop-rspec_rails
+
+AllCops:
+  NewCops: enable
+  Exclude:
+    - bin/*
+    - db/schema.rb
+    - db/*_schema.rb
+    - vendor/**/*
+
+RSpec/NestedGroups:
+  Max: 5
+
+RSpec/ExampleLength:
+  Enabled: false
+
+RSpec/MultipleMemoizedHelpers:
+  Max: 8
+
+Style/Documentation:
+  Enabled: false
+
+Style/HashSyntax:
+  EnforcedShorthandSyntax: either_consistent
+  EnforcedStyle: ruby19_no_mixed_keys
+
+Metrics/AbcSize:
+  Max: 70
+  Exclude:
+    - db/migrate/*
+
+Layout/LineLength:
+  Max: 100
+  AllowURI: true
+
+Metrics/BlockLength:
+  Max: 50
+  Exclude:
+    - config/routes.rb
+
+Metrics/MethodLength:
+  Max: 20
+  Exclude:
+    - db/migrate/*
